@@ -1,0 +1,6 @@
+<app-header (submitted)="onSubmitted($event)" [searchBy]="searchBy"></app-header>
+<mat-tab-group mat-align-tabs="start" backgroundColor="accent" (selectedTabChange)="tabChanged($event)">
+  <mat-tab [label]="data[0]?.title"><app-phones [phones]="data[0].items" [searchBy]="searchBy" class="phones"></app-phones></mat-tab>
+  <mat-tab [label]="data[1]?.title"><app-cars [cars]="data[1].items" [searchBy]="searchBy"></app-cars></mat-tab>
+  <mat-tab [label]="data[2]?.title"><app-laptops [laptops]="data[2].items" [searchBy]="searchBy"></app-laptops></mat-tab>
+</mat-tab-group>
