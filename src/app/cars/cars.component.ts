@@ -13,9 +13,6 @@ export class CarsComponent implements OnInit, AfterViewInit, OnChanges {
   @Input() searchBy: string | undefined;
   dataSource: MatTableDataSource<ICar> | undefined;
   displayedColumns: string[] = ['vendor', 'name', 'price', 'is_hybrid'];
-  constructor() {
-
-  }
   @ViewChild(MatSort) sort: any;
   ngAfterViewInit(): void {
     this.dataSource.sort = this.sort;

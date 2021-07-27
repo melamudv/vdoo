@@ -13,9 +13,6 @@ export class PhonesComponent implements OnInit, AfterViewInit, OnChanges {
   @Input() searchBy: string;
   dataSource: MatTableDataSource<IPhone>;
   displayedColumns: string[] = ['vendor', 'name', 'price'];
-  constructor() {
-
-  }
   @ViewChild(MatSort) sort: any;
   ngAfterViewInit(): void {
     this.dataSource.sort = this.sort;

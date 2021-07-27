@@ -15,7 +15,7 @@ export class AllComponent implements OnInit {
 
   ngOnInit(): void {
     this.dataService.getData()
-      .subscribe((data: any[]) => this.data = data);
+      .subscribe((data: IResponse[]) => this.data = data);
   }
 
   tabChanged(event): void {

@@ -14,10 +14,6 @@ export class LaptopsComponent implements OnInit, AfterViewInit, OnChanges {
   dataSource: MatTableDataSource<ILaptop>;
   displayedColumns: string[] = ['vendor', 'name', 'price', 'system'];
 
-  constructor() {
-
-  }
-
   @ViewChild(MatSort) sort: any;
 
   ngAfterViewInit(): void {
